@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Players</h1>
+
+<div id="players">
+  <table>
+    <tr>
+      <th>id</th>
+      <th>email</th>
+      <th>Experiência</th>
+    </tr>
+      <% @players.each do |player| %>
+        <tr>
+        <td><%= player.id %></td>
+        <td><%= player.email %></td>
+        <td><%= player.experience_level %></td>
+        </tr>
+      <% end %>
+  </table>
+</div>
+
+<%= link_to "New player", new_player_path %>
